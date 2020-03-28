@@ -1,12 +1,22 @@
 import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import InstagramIcon from "@material-ui/icons/Instagram";
 
-import "./Footer.css";
+const useStyles = makeStyles({
+  socialIcon: {
+    transition: ".2s ease-in",
+    "&:hover": {
+      color: "#424242 !important"
+    }
+  }
+});
 
-function Footer() {
+function Footer({ theme }) {
+  const classes = useStyles();
+  const styleIcon = theme === "light" ? { color: "black" } : { color: "white" };
   return (
     <>
       <Typography
@@ -28,17 +38,17 @@ function Footer() {
       >
         <li style={{ display: "inline-block", marginRight: "20px" }}>
           <a href="https://www.linkedin.com/in/khem-sok-5a42a2165/">
-            <LinkedInIcon className="icon-footer" />
+            <LinkedInIcon className={classes.socialIcon} style={styleIcon} />
           </a>
         </li>
         <li style={{ display: "inline-block", marginRight: "20px" }}>
           <a href="https://github.com/khemsok">
-            <GitHubIcon className="icon-footer" />
+            <GitHubIcon className={classes.socialIcon} style={styleIcon} />
           </a>
         </li>
         <li style={{ display: "inline-block", marginRight: "20px" }}>
           <a href="https://www.instagram.com/_aceeeeeee_/">
-            <InstagramIcon className="icon-footer" />
+            <InstagramIcon className={classes.socialIcon} style={styleIcon} />
           </a>
         </li>
       </ul>

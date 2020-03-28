@@ -53,7 +53,7 @@ function TopAffected() {
           variant="h5"
           style={{ marginTop: "50px", marginBottom: "5px" }}
         >
-          Top Affected Countries
+          Top Affected Countries 🚦
         </Typography>
         <FormControl>
           <InputLabel id="demo-simple-select-label">Sort By</InputLabel>

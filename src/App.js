@@ -1,25 +1,37 @@
 import React, { useState, useEffect } from "react";
-import Paper from "@material-ui/core/Paper";
 import Container from "@material-ui/core/Container";
 import Navbar from "./components/Navbar";
 import GlobalOverview from "./components/GlobalOverview";
 import TopAffected from "./components/TopAffected";
+import Timeline from "./components/Timeline";
+import HowYouCanHelp from "./components/HowYouCanHelp";
 import Footer from "./components/Footer";
-import themeFile from "./util/themeFile";
+import { lightTheme, darkTheme } from "./util/themeFile";
+
+import CssBaseline from "@material-ui/core/CssBaseline";
 
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import "./App.css";
 
-const theme = createMuiTheme(themeFile);
-
 function App() {
+  const light = createMuiTheme(lightTheme);
+  const dark = createMuiTheme(darkTheme);
+  const [themeSelector, setThemeSelector] = useState("light");
+
+  const handleThemeChange = () => {
+    setThemeSelector(themeSelector === "light" ? "dark" : "light");
+  };
+
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={themeSelector === "light" ? light : dark}>
+      <CssBaseline />
       <Container maxWidth="lg">
-        <Navbar />
+        <Navbar themeChange={handleThemeChange} mode={themeSelector} />
         <GlobalOverview />
         <TopAffected />
-        <Footer />
+        <Timeline />
+        <HowYouCanHelp />
+        <Footer theme={themeSelector} />
       </Container>
     </ThemeProvider>
   );

@@ -11,7 +11,6 @@ import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 
 function convertUnixTime(unixTime) {
-  console.log(unixTime);
   let datetime = moment(unixTime).format("lll");
   return datetime;
 }
@@ -24,7 +23,7 @@ function GlobalOverview() {
       .then(data => setAllCases(data));
   }, []);
 
-  let dataStatus = Object.keys(allCases).length !== 0 ? true : false;
+  // let dataStatus = Object.keys(allCases).length !== 0 ? true : false;
 
   let displayGlobalSection =
     Object.keys(allCases).length === 0 ? (
@@ -83,7 +82,7 @@ function GlobalOverview() {
         variant="h5"
         style={{ margin: "20px 0", fontWeight: "ligher" }}
       >
-        Global Overview
+        Global Overview 🌎
       </Typography>
       <Grid container justify="center" alignItems="center" spacing={4}>
         {displayGlobalSection}
