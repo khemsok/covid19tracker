@@ -16,7 +16,14 @@ import "./App.css";
 function App() {
   const light = createMuiTheme(lightTheme);
   const dark = createMuiTheme(darkTheme);
-  const [themeSelector, setThemeSelector] = useState("light");
+
+  const curThemeName = localStorage.getItem("themetype") || "light";
+
+  const [themeSelector, setThemeSelector] = useState(curThemeName);
+
+  useEffect(() => {
+    localStorage.setItem("themetype", themeSelector);
+  }, [themeSelector]);
 
   const handleThemeChange = () => {
     setThemeSelector(themeSelector === "light" ? "dark" : "light");
