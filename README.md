@@ -1,7 +1,7 @@
 
 <div align="center">
   <h1>Covid 19 Tracker 👿</h1>
-  <a href="https://covid19ruinmysummer.xyz/"><img src="https://i.imgur.com/J24ACok.png" widt></a>
+  <a href="https://covid19ruinmysummer.xyz/" target="_blank"><img src="https://i.imgur.com/J24ACok.png" widt></a>
   <sub>A minimalist Covid 19 Tracker  👏</sub>
 </div>
 
