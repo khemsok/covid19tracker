@@ -9,7 +9,7 @@
 - **🌎 Global Overview**: Show the impact around the globe
 - **🚦 Top Affected Countries**: Display the stats of the Covid-19 impact of the top affected countries 
 - **⏳ Timeline**: Show a chart which display the timeline of the impact day by day
-- **💉 How You Can Help**:  Give URLs users can go head to find more information about Covid-19
+- **💉 How You Can Help**:  Provide users with some information on how they can contribute to flattening the line
 
 ### Technologies 🔨
  - **🌐 React JS**: Front End
