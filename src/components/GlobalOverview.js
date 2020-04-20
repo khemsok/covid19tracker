@@ -1,18 +1,14 @@
 import React, { useState, useEffect, Fragment } from "react";
-import LinearProgress from "@material-ui/core/LinearProgress";
 
 import GlobalSection from "./GlobalSection";
 import moment from "moment";
 
-import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 
 function convertUnixTime(unixTime) {
   let datetime = moment(unixTime).format("lll");
-  return datetime;
+  return moment(datetime).fromNow();
 }
 
 function GlobalOverview() {
