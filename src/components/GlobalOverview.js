@@ -77,7 +77,7 @@ function GlobalOverview() {
         variant="h5"
         style={{ margin: "20px 0", fontWeight: "ligher" }}
       >
-        Global Overview 🌎
+        Global Overview <span role="img">🌎</span>
       </Typography>
       <Grid container justify="center" alignItems="center" spacing={4}>
         {displayGlobalSection}

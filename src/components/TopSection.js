@@ -22,7 +22,7 @@ function TopSection({
   active,
   critical,
   todayDeaths,
-  todayCases
+  todayCases,
 }) {
   const displayTopSection = dataStatus ? (
     <ExpansionPanel className="panel">
@@ -33,7 +33,7 @@ function TopSection({
               listStyleType: "none",
               margin: "0",
               padding: "0",
-              overflow: "hidden"
+              overflow: "hidden",
             }}
           >
             <li style={{ float: "left" }}>
@@ -46,18 +46,24 @@ function TopSection({
             </li>
             <li>
               <Tooltip title="Number of Recoveries" placement="top">
-                <p>😃 {numberWithCommas(recovered)}</p>
+                <p>
+                  <span role="img">😃</span> {numberWithCommas(recovered)}
+                </p>
               </Tooltip>
             </li>
 
             <li>
               <Tooltip title="Number of Deaths" placement="top">
-                <p>💀 {numberWithCommas(deaths)}</p>
+                <p>
+                  <span role="img">💀</span> {numberWithCommas(deaths)}
+                </p>
               </Tooltip>
             </li>
             <li>
               <Tooltip title="Number of Cases" placement="top">
-                <p>😥 {numberWithCommas(cases)}</p>
+                <p>
+                  <span role="img">😥</span> {numberWithCommas(cases)}
+                </p>
               </Tooltip>
             </li>
           </ul>

@@ -29,17 +29,17 @@ function HowYouCanHelp() {
                   height: "75px",
                   display: "flex",
                   justifyContent: "center",
-                  alignItems: "center"
+                  alignItems: "center",
                 }}
               >
                 <Typography>
-                  Donate 💰{" "}
+                  Donate <span role="img">💰</span>
                   <span>
                     <InfoIcon
                       className="info-icon"
                       style={{
                         verticalAlign: "middle",
-                        fontSize: "1em"
+                        fontSize: "1em",
                       }}
                     />
                   </span>
@@ -62,17 +62,17 @@ function HowYouCanHelp() {
                   height: "75px",
                   display: "flex",
                   justifyContent: "center",
-                  alignItems: "center"
+                  alignItems: "center",
                 }}
               >
                 <Typography>
-                  Wash Your Hand 💧{" "}
+                  Wash Your Hand <span role="img">💧</span>
                   <span>
                     <InfoIcon
                       className="info-icon"
                       style={{
                         verticalAlign: "middle",
-                        fontSize: "1em"
+                        fontSize: "1em",
                       }}
                     />
                   </span>
@@ -95,17 +95,17 @@ function HowYouCanHelp() {
                   height: "75px",
                   display: "flex",
                   justifyContent: "center",
-                  alignItems: "center"
+                  alignItems: "center",
                 }}
               >
                 <Typography>
-                  Social Distancing 🚶‍♂️{" "}
+                  Social Distancing <span role="img">🚶‍♂️</span>
                   <span>
                     <InfoIcon
                       className="info-icon"
                       style={{
                         verticalAlign: "middle",
-                        fontSize: "1em"
+                        fontSize: "1em",
                       }}
                     />
                   </span>

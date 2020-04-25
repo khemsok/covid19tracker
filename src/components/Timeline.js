@@ -28,7 +28,7 @@ function Timeline() {
     if (countryArr.length === 0) {
       fetch("https://corona.lmao.ninja/v2/countries?sort=cases")
         .then((res) => res.json())
-        .then((data) => setCountryArr(data.slice(0, 20)));
+        .then((data) => setCountryArr(data));
     }
   }, [countrySelected]);
 
@@ -48,6 +48,7 @@ function Timeline() {
       <div>
         <Autocomplete
           style={{ width: 300 }}
+          disableClearable
           size="small"
           options={countryArr}
           getOptionLabel={(option) => option.country}
@@ -72,8 +73,9 @@ function Timeline() {
 
   return historicalTransform.length !== 0 ? (
     <Container maxWidth="md" style={{ marginTop: "50px" }}>
-      <Typography variant="h5">Timeline ⏳</Typography>
-      {/* <Typography variant="h5">{countrySelected}</Typography> */}
+      <Typography variant="h5">
+        Timeline <span>⏳</span>
+      </Typography>
       {autocompleteDisplay}
 
       <div style={{ display: "flex", justifyContent: "center" }}>

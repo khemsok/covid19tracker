@@ -27,7 +27,13 @@ function Navbar({ themeChange, mode }) {
       style={{ marginTop: "30px", marginBottom: "10px" }}
     >
       <Typography variant="h2" style={{ fontWeight: 800 }}>
-        COVID<span style={{ color: "red" }}>19 👿</span>
+        COVID
+        <span style={{ color: "red" }}>
+          19{" "}
+          <span role="img" aria-label="angry">
+            👿
+          </span>
+        </span>
       </Typography>
       <div onClick={themeChange}>{displayIconClick}</div>
     </Box>
