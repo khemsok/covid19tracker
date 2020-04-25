@@ -116,7 +116,7 @@ function TopSection({
   ) : (
     <ExpansionPanel>
       <ExpansionPanelSummary>
-        <div style={{ width: "100%" }}>
+        <div style={{ width: "100%", padding: "20px 0" }}>
           <LinearProgress color="primary" />
         </div>
       </ExpansionPanelSummary>
